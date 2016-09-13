@@ -1,6 +1,7 @@
 package Server;
 
-public class Client {
+public class Thread {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
