@@ -15,7 +15,7 @@ public class ServerThread extends Thread{
 			String message = null;
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			while ((message = bufferedReader.readLine()) != null){
-				System.out.println("Incoming client message: "+ message);
+				System.out.printf(" Incoming %s message: %s \n",sock.toString(), message);
 			}
 			sock.close();
 		
