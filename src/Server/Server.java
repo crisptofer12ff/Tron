@@ -1,23 +1,24 @@
 package Server;
 
+import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 public class Server {
-	public static final int PORT = 4444;
-	public static void main(String[] args) throws IOException{
+	private static final int PORT = 7777;
+	public static void main(String[] args) throws IOException {
 		new Server().runServer();
+
 	}
-	public void runServer() trows IOException{
-		ServerSocket serverSocket = ServerSocket(PORT);
+	public void runServer() throws IOException{
+		ServerSocket serverSocket = new ServerSocket(PORT);
+		System.out.println("Server up and ready for connections....");
 		while(true){
 			Socket socket = serverSocket.accept();
 			new ServerThread(socket).start();
-			
 			
 		}
 		
 	}
 
 }
-//This is my second test
-//hello 
